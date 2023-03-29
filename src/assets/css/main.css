@@ -1,0 +1,25 @@
+:root {
+  --blue-mobizen: #186cb4;
+  --blue-zalo: #4285f4;
+}
+
+html {
+  font-family: system-ui, sans-serif;
+  background-color: #F6F6F6;
+}
+
+.container-small {
+  @apply max-w-[500px] shadow-lg min-h-screen mx-auto;
+}
+
+.bg-blue-mobizen {
+  background: var(--blue-mobizen);
+}
+
+.bg-blue-zalo {
+  background: var(--blue-zalo);
+}
+
+.text-blue-mobizen {
+  color: var(--blue-mobizen);
+}
