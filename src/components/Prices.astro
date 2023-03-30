@@ -1,0 +1,141 @@
+---
+import PriceItem from "./PriceItem.astro";
+
+const prices = [
+  {
+    title: "BẢNG GIÁ PIN IPHONE",
+    image: "/src/assets/images/hero-2.png",
+    id: "battery",
+    rows: [
+      ["iPhone 7","250.000đ","400.000đ"  ],
+      ["iPhone 7 Plus","350.000đ","450.000đ"  ],
+      ["iPhone 8","300.000đ","500.000đ"  ],
+      ["iPhone 8 Plus","400.000đ","550.000đ"  ],
+      ["iPhone X","450.000đ","650.000đ"  ],
+      ["iPhone XR","500.000đ","650.000đ"  ],
+      ["iPhone Xs Max","550.000đ","750.000đ"  ],
+      ["iPhone Xs","500.000đ","650.000đ"  ],
+      ["iPhone 11","600.000đ","750.000đ"  ],
+      ["iPhone 11 Pro","650.000đ","750.000đ"  ],
+      ["iPhone 11 Pro Max","750.000đ","850.000đ"  ],
+      ["iPhone 12","900.000đ","1.100.000đ"  ],
+      ["iPhone 12 Pro","950.000đ","1.300.000đ"  ],
+      ["iPhone 12 Pro Max","1.200.000đ","1.400.000đ"  ],
+      ["iPhone 13","1.200.000đ","Liên hệ"  ],
+      ["iPhone 13 Pro","1.300.000đ","Liên hệ"  ],
+      ["iPhone 13 Pro Max","1.500.000đ","Liên hệ"  ],
+      ["(*)Pin Bảo Hành 12 Tháng 1 đổi 1","",""  ]
+    ]
+  },
+  {
+    title: "BẢNG GIÁ MÀN HÌNH IPHONE",
+    image: "/src/assets/images/man-hinh-iphone.png",
+    id: "screen",
+    rows: [
+      ["iPhone X","950.000đ","1.200.000đ"  ],
+      ["iPhone XR","950.000đ","1.300.000đ"  ],
+      ["iPhone Xs Max","1.350.000đ","1.850.000đ"  ],
+      ["iPhone Xs","950.000đ","1.300.000đ"  ],
+      ["iPhone 11","1.000.000đ","1.400.000đ"  ],
+      ["iPhone 11 Pro","1.300.000đ","1.800.000đ"  ],
+      ["iPhone 11 Pro Max","1.500.000đ","2.200.000đ"  ],
+      ["iPhone 12","2.000.000đ","2.300.000đ"  ],
+      ["iPhone 12 Pro","2.000.000đ","2.500.000đ"  ],
+      ["iPhone 12 Pro Max","2.400.000đ","2.900.000đ"  ],
+      ["iPhone 13","Liên hệ","Liên hệ"  ],
+      ["iPhone 13 Pro","Liên hệ","Liên hệ"  ],
+      ["iPhone 13 Pro Max","Liên hệ","Liên hệ"  ]
+    ]
+  },
+  {
+    title: "BẢNG GIÁ MẶT KÍNH IPHONE",
+    image: "/src/assets/images/banner-kinh-iphone.png",
+    id: "glass",
+    rows: [
+      ["iPhone X","600.000đ","12 Tháng"  ],
+      ["iPhone XR","600.000đ","12 Tháng"  ],
+      ["iPhone Xs Max","700.000đ","12 Tháng"  ],
+      ["iPhone Xs","600.000đ","12 Tháng"  ],
+      ["iPhone 11","700.000đ","12 Tháng"  ],
+      ["iPhone 11 Pro","800.000đ","12 Tháng"  ],
+      ["iPhone 11 Pro Max","850.000đ","12 Tháng"  ],
+      ["iPhone 12/12 Mini","1.000.000đ","12 Tháng"  ],
+      ["iPhone 12 Pro","1.400.000đ","12 Tháng"  ],
+      ["iPhone 12 Pro Max","1.600.000đ","12 Tháng"  ],
+      ["iPhone 13","Liên hệ","12 Tháng"  ],
+      ["iPhone 13 Pro","Liên hệ","12 Tháng"  ],
+      ["iPhone 13 Pro Max","Liên hệ","12 Tháng"  ]
+    ]
+  },
+  {
+    title: "BẢNG GIÁ CAMERA IPHONE",
+    image: "/src/assets/images/camera-iphone.png",
+    id: "camera",
+    rows: [
+      ["iPhone 7","250K","3-12 Tháng"  ],
+      ["iPhone 7 Plus","250K","3-12 Tháng"  ],
+      ["iPhone 8","300K","3-12 Tháng"  ],
+      ["iPhone 8 Plus","350K","3-12 Tháng"  ],
+      ["iPhone X","400K","3-12 Tháng"  ],
+      ["iPhone Xs","550K","3-12 Tháng"  ],
+      ["iPhone Xs Max","550K","3-12 Tháng"  ],
+      ["iPhone 11","600K","3-12 Tháng"  ],
+      ["iPhone 11 Pro","700K","3-12 Tháng"  ],
+      ["iPhone 11 Pro Max","750K","3-12 Tháng"  ],
+      ["iPhone 12","1400K","3-12 Tháng"  ],
+      ["iPhone 12 Pro","1400K","3-12 Tháng"  ],
+      ["iPhone 12 Pro Max","1500K","3-12 Tháng"  ],
+      ["iPhone 13","2000K","3-12 Tháng"  ],
+      ["iPhone 13 Pro","2300k","3-12 Tháng"  ],
+      ["iPhone 13 Pro Max","3000K","3-12 Tháng"  ]
+    ]
+  },
+  {
+    title: "BẢNG GIÁ VỎ IPHONE",
+    image: "/src/assets/images/vo-iphone.png",
+    id: "shell",
+    rows: [
+      ["iPhone 7","400K","3-12 Tháng"  ],
+      ["iPhone 7 Plus","400K","3-12 Tháng"  ],
+      ["iPhone 8","550K","3-12 Tháng"  ],
+      ["iPhone 8 Plus","650K","3-12 Tháng"  ],
+      ["iPhone X","950K","3-12 Tháng"  ],
+      ["iPhone Xs","950K","3-12 Tháng"  ],
+      ["iPhone Xs Max","1300K","3-12 Tháng"  ],
+      ["iPhone 11","1300K","3-12 Tháng"  ],
+      ["iPhone 11 Pro","2300K","3-12 Tháng"  ],
+      ["iPhone 11 Pro Max","2500K","3-12 Tháng"  ],
+      ["iPhone 12","3400K","3-12 Tháng"  ],
+      ["iPhone 12 Pro","4600K","3-12 Tháng"  ],
+      ["iPhone 12 Pro Max","5400K","3-12 Tháng"  ]
+    ]
+  },
+  {
+    title: "BẢNG GIÁ KÍNH LƯNG IPHONE",
+    image: "/src/assets/images/kinh-lung-iphone.png",
+    id: "glass-back",
+    rows: [
+      ["iPhone 8","300K","3-12 Tháng"  ],
+      ["iPhone 8 Plus","350K","3-12 Tháng"  ],
+      ["iPhone X","350K","3-12 Tháng"  ],
+      ["iPhone Xs","450K","3-12 Tháng"  ],
+      ["iPhone Xs Max","650K","3-12 Tháng"  ],
+      ["iPhone 11","750K","3-12 Tháng"  ],
+      ["iPhone 11 Pro","700K","3-12 Tháng"  ],
+      ["iPhone 11 Pro Max","750K","3-12 Tháng"  ],
+      ["iPhone 12","850K","3-12 Tháng"  ],
+      ["iPhone 12 Pro","1100K","3-12 Tháng"  ],
+      ["iPhone 12 Pro Max","1200K","3-12 Tháng"  ],
+      ["iPhone 13","1400K","3-12 Tháng"  ],
+      ["iPhone 13 Pro","1800K","3-12 Tháng"  ],
+      ["iPhone 13 Pro Max","1900K","3-12 Tháng"  ]
+    ]
+  },
+]
+---
+
+<section>
+  {prices.map(item => (
+    <PriceItem data={item} />
+  ))}
+</section>

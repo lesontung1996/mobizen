@@ -1,0 +1,56 @@
+---
+const { title, image, id, rows } = Astro.props.data;
+
+const tableHeads = [
+  "Thiết bị",
+  "Giá",
+  "Bảo Hành",
+]
+---
+
+<div id={id} class="mb-10">
+  <img src={image} alt={title}>
+  <h2 class="text-blue-mobizen font-bold text-2xl p-4">{title}</h2>
+  <table class="table"
+    <thead>
+      <tr>
+        {(tableHeads || []).map(head => (
+          <th> {head} </th>
+        ))}
+      </tr>
+    </thead>
+    <tbody>
+      {(rows || []).map(row => (
+        <tr>
+          {(row || []).map(text => (
+            <td> {text} </td>
+          ))}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
+<style>
+.table {
+  @apply w-full;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  @apply px-4 py-2 border-b border-gray-300 text-left text-gray-700;
+}
+
+.table th {
+  @apply font-bold;
+}
+
+.table thead tr {
+  @apply bg-gray-100;
+}
+
+.table tbody tr:hover {
+  @apply hover:bg-gray-100;
+}
+</style>

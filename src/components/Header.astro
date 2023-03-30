@@ -1,21 +1,60 @@
 ---
 import { phone_1 } from "../commons";
+import { numbersOnly } from "../functions";
 import logo from "../assets/images/mobizen-logo.png";
 import PhoneVolume from "./icons/PhoneVolume.astro";
+import MobileScreen from "./icons/MobileScreen.astro";
+
+const sections = [
+  {
+    link: "#screen",
+    title: "Màn hình"
+  },
+  {
+    link: "#battery",
+    title: "Pin"
+  },
+  {
+    link: "#glass",
+    title: "Ép kính"
+  },
+  {
+    link: "#camera",
+    title: "Camera"
+  },
+  {
+    link: "#shell",
+    title: "Vỏ"
+  },
+];
+
+const linkPhone = `tel:${numbersOnly(phone_1)}`;
+const linkZalo = `https://zalo.me/${numbersOnly(phone_1)}`;
 ---
 
-<header class="flex items-center bg-blue-mobizen px-4 py-2">
-  <a class="flex-shrink max-w-[200px]" href="/">
-    <img src={logo} alt="Mobizen logo">
-  </a>
-  <div class="flex items-center flex-shrink-0 ml-auto">
-    <a class="phone-link bg-white text-blue-mobizen" href=`tel:${phone_1}`>
-      <PhoneVolume />
-      <span class="ml-2">
-        {phone_1}
-      </span>
+<header class="sticky top-0 shadow-md">
+  <div class="flex items-center bg-blue-mobizen px-4 py-2">
+    <a class="flex-shrink max-w-[200px]" href="/">
+      <img src={logo} alt="Mobizen logo">
     </a>
-    <a class="phone-link bg-blue-zalo text-white" href=`https://zalo.me/${phone_1}`>ZALO</a>
+    <div class="flex items-center flex-shrink-0 ml-auto">
+      <a class="phone-link bg-white text-blue-mobizen" href={linkPhone}>
+        <PhoneVolume />
+        <span class="ml-2">
+          {phone_1}
+        </span>
+      </a>
+      <a class="phone-link bg-blue-zalo text-white" href={linkZalo}>ZALO</a>
+    </div>
+  </div>
+  <div class="flex items-center justify-evenly bg-gray-200 px-4 py-2 text-sm font-semibold text-gray-700">
+    <span>Báo Giá:</span>
+    {sections.map(section => (
+      <a href={section.link} class="flex items-center hover:text-black transition-colors">
+        <MobileScreen/>
+        <span class="block ml-1">{section.title}</span>
+      </a>
+    ))}
   </div>
 </header>
 
