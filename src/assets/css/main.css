@@ -1,11 +1,25 @@
 :root {
   --blue-mobizen: #186cb4;
   --blue-zalo: #4285f4;
+  --blue-gradient: linear-gradient(90deg, rgba(24,73,180,1) 0%, rgba(24,131,180,1) 100%);
 }
 
 html {
   font-family: system-ui, sans-serif;
   background-color: #F6F6F6;
+  scroll-behavior: smooth;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .container-small {
@@ -20,6 +34,22 @@ html {
   background: var(--blue-zalo);
 }
 
+.bg-gradient {
+  background: var(--blue-gradient);
+}
+
 .text-blue-mobizen {
   color: var(--blue-mobizen);
+}
+
+.text-gradient {
+  font-weight: 900;
+  background-image: var(--blue-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 100% 200%;
+}
+
+.animation-scale {
+  animation: scale 1.5s ease-in-out infinite;
 }

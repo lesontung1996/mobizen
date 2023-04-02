@@ -1,0 +1,21 @@
+---
+const steps = [
+  "Nhân Viên TeamCare tiếp nhận lắng nghe nhu cầu khách hàng",
+  "Chuyển máy đến NV kĩ thuật để kiểm tra tình trạng máy và tư vấn giải pháp cho khách hàng",
+  "Báo giá dịch vụ đầy đủ chi tiết và tốt nhất cho khách hàng",
+  "Sau khi khách hàng đồng ý, NV kĩ thuật tiến hành dưới sự dám sát của khách hàng",
+  "Khách hàng nhận máy kiểm tra > KH hài lòng > NV viết phiếu BH > KH thanh toán",
+]
+---
+
+<section class="mt-8">
+  <h2 class="text-3xl text-center font-bold uppercase text-gradient mb-8">QUY TRÌNH TẠI Mobizen</h2>
+  <div>
+    {steps.map((step, index) => (
+      <div class="odd:bg-gray-200 px-4 py-6">
+        <h3 class="text-blue-mobizen font-semibold mb-2">Bước {index + 1}:</h3>
+        <p class="text-gray-700">{step}</p>
+      </div>
+    ))}
+  </div>
+</section>

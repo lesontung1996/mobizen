@@ -10,8 +10,8 @@ const tableHeads = [
 
 <div id={id} class="mb-10">
   <img src={image} alt={title}>
-  <h2 class="text-blue-mobizen font-bold text-2xl p-4">{title}</h2>
-  <table class="table"
+  <h2 class="text-gradient font-bold text-2xl px-4 py-6">{title}</h2>
+  <table class="table">
     <thead>
       <tr>
         {(tableHeads || []).map(head => (
@@ -47,6 +47,10 @@ const tableHeads = [
 }
 
 .table thead tr {
+  @apply bg-gray-200;
+}
+
+.table tbody tr:nth-child(even) {
   @apply bg-gray-100;
 }
 
