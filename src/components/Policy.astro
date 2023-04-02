@@ -2,23 +2,31 @@
 const policies = [
   {
     title: "Giao nhận trả máy tận nơi",
-    image: "test,"
+    image: "/assets/images/policy/maintenance.png"
   },
   {
     title: "Mượn điện thoại miễn phí",
-    image: "test,"
+    image: "/assets/images/policy/test.png"
   },
   {
     title: "Làm việc nhanh đúng hẹn",
-    image: "test,"
+    image: "/assets/images/policy/back-in-time.png"
   },
   {
     title: "Hoàn tiền 100% nếu không hài lòng",
-    image: "test,"
+    image: "/assets/images/policy/refund.png"
   },
 ]
 ---
 
-<section>
+<section class="mb-10">
   <h2 class="text-3xl text-center font-bold uppercase text-gradient mb-8">CHÍNH SÁCH TẠI Mobizen</h2>
+  <div>
+    {policies.map(policy => (
+      <div>
+        <img src={policy.image} alt={policy.title}>
+        <h3>{policy.title}</h3>
+      </div>
+    ))}
+  </div>
 </section>
