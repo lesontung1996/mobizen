@@ -23,9 +23,9 @@ const policies = [
   <h2 class="text-3xl text-center font-bold uppercase text-gradient mb-8">CHÍNH SÁCH TẠI Mobizen</h2>
   <div>
     {policies.map(policy => (
-      <div>
-        <img src={policy.image} alt={policy.title}>
-        <h3>{policy.title}</h3>
+      <div class="flex items-center px-4 py-6 even:bg-gray-200">
+        <img class="w-12 h-12" src={policy.image} alt={policy.title}>
+        <h3 class="ml-4 font-semibold text-lg">{policy.title}</h3>
       </div>
     ))}
   </div>

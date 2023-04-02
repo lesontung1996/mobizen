@@ -1,3 +1,54 @@
-<footer>
-  Footer
+---
+import { phone_1, phone_2 } from "../commons";
+import Envelop from "./icons/Envelop.astro";
+import LocationPin from "./icons/LocationPin.astro";
+import PhoneSolid from "./icons/PhoneSolid.astro";
+
+const year = new Date().getFullYear()
+---
+
+<footer class="bg-neutral-800 p-4 text-white">
+  <h2 class="text-2xl uppercase font-bold mb-6">Hệ thống Mobizen</h2>
+  <div>
+    <div class="info">
+      <LocationPin />
+      <span>Cơ sở 1: 126 Thái Hà, Trung Liệt, Đống Đa, Hà Nội</span>
+    </div>
+    <div class="info">
+      <LocationPin />
+      <span>Cơ sở 2: 109 Xuân Thuỷ, Dịch Vọng Hậu, Cầu Giấy, Hà Nội</span>
+    </div>
+    <div class="info">
+      <PhoneSolid />
+      <span>Hotline 126 Thái Hà: {phone_1}</span>
+    </div>
+    <div class="info">
+      <PhoneSolid />
+      <span>Hotline 109 Xuân Thuỷ: {phone_2}</span>
+    </div>
+    <div class="info">
+      <PhoneSolid />
+      <span>Bảo Hành: 0941 94 1818</span>
+    </div>
+    <div class="info">
+      <Envelop />
+      <span><a href="mailto:hotromobizen@gmail.com">Mail: hotromobizen@gmail.com</a></span>
+    </div>
+  </div>
+  <div class="mt-4">
+    <a href="https://goo.gl/maps/m1MDsUPLnzoV2kDD9" target="_blank" class="flex items-center justify-center text-center w-full px-10 py-2 text-white bg-gradient">
+      <LocationPin /><span class="ml-2">Vị trí bản đồ</span>
+    </a>
+  </div>
+  <div class="text-center text-sm text-gray-300 mt-6"> Copyright {year} © Mobizen </div>
 </footer>
+
+<style>
+  .info {
+    @apply flex items-center mb-2;
+  }
+
+  .info > span {
+    @apply ml-2 text-gray-200;
+  }
+</style>

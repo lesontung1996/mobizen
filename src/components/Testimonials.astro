@@ -1,0 +1,38 @@
+---
+import StarSolid from "./icons/StarSolid.astro";
+
+const testimonials = [
+  {
+    rate: 5,
+    customer: "Nguyễn Hưng",
+    content: "Đi từ Hưng Yên lên chỉ để làm mới màn hình iPhone. Nhân viên làm nhanh, chi phí hợp lý. Không uổng công lên Hà Nội",
+  },
+  {
+    rate: 5,
+    customer: "Loan MT",
+    content: "Pin dùng ổn , rất hài lòng về dịch vụ bên này. Vote 5*",
+  },
+  {
+    rate: 5,
+    customer: "Minh Anh",
+    content: "Mới được xử lý mặt lưng tại đây , khá hài lòng về chất lượng dịch vụ bên bạn. Sẽ ủng hộ lần sau !",
+  },
+]
+---
+
+<section class="px-4">
+  <h2 class="text-3xl text-center font-bold uppercase text-gradient mb-8">KHÁCH HÀNG TẠI Mobizen</h2>
+  <div>
+    {testimonials.map(testimonial => (
+      <div class="py-3">
+        <div class="flex items-center text-yellow-400 mb-1">
+          {Array.from(Array(5)).map(() => (
+            <StarSolid />
+          ))}  
+        </div>
+        <h3 class="font-semibold text-lg mb-1">{testimonial.customer}</h3>
+        <p class="text-gray-700">{testimonial.content}</p>
+      </div>
+    ))}
+  </div>
+</section>
