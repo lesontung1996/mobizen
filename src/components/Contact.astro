@@ -1,10 +1,10 @@
 ---
 import ContactForm from "./ContactForm.astro";
-import CountDown from "./CountDown.astro";
+import CountDown from "./CountDown.vue";
 
 ---
 
 <section class="px-4">
-  <CountDown />
+  <CountDown client:idle />
   <ContactForm />
 </section>
