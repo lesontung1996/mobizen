@@ -1,60 +1,37 @@
 ---
-const { title, image, id, rows } = Astro.props.data;
-
-const tableHeads = [
-  "Thiết bị",
-  "Giá",
-  "Bảo Hành",
-]
+const { Content, frontmatter } = Astro.props.data;
 ---
 
-<div id={id} class="mb-10">
-  <img src={image} alt={title}>
-  <h2 class="text-gradient font-bold text-2xl px-4 py-6">{title}</h2>
-  <table class="table">
-    <thead>
-      <tr>
-        {(tableHeads || []).map(head => (
-          <th> {head} </th>
-        ))}
-      </tr>
-    </thead>
-    <tbody>
-      {(rows || []).map(row => (
-        <tr>
-          {(row || []).map(text => (
-            <td> {text} </td>
-          ))}
-        </tr>
-      ))}
-    </tbody>
-  </table>
+<div id={frontmatter.id} class="mb-10">
+  <img src={frontmatter.image} alt={frontmatter.title}>
+  <h2 class="text-gradient font-bold text-2xl px-4 py-6">{frontmatter.title}</h2>
+  <Content />
 </div>
 
-<style>
-.table {
+<style is:global>
+table {
   @apply w-full;
   border-collapse: collapse;
 }
 
-.table th,
-.table td {
+table th,
+table td {
   @apply px-4 py-2 border-b border-gray-300 text-left text-gray-700;
 }
 
-.table th {
+table th {
   @apply font-bold;
 }
 
-.table thead tr {
+table thead tr {
   @apply bg-gray-200;
 }
 
-.table tbody tr:nth-child(even) {
+table tbody tr:nth-child(even) {
   @apply bg-gray-100;
 }
 
-.table tbody tr:hover {
+table tbody tr:hover {
   @apply hover:bg-gray-100;
 }
 </style>

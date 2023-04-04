@@ -5,16 +5,18 @@ backend:
 # This line should *not* be indented
 publish_mode: editorial_workflow
 
-media_folder: "images/uploads" # Media files will be stored in the repo under images/uploads
+media_folder: "/public/assets/images" # Media files will be stored in the repo under images/uploads
+public_folder: "/assets/images" # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
   - name: "prices" # Used in routes, e.g., /admin/collections/blog
     label: "Prices" # Used in the UI
     folder: "src/_posts/prices" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
+    delete: true
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
+      - {label: "ID", name: "id", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Image", name: "image", widget: "image"}
-      - {label: "Rows", name: "rows", widget: "markdown"}
+      - {label: "Body", name: "bpdy", widget: "markdown"}
