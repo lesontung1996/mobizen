@@ -19,4 +19,4 @@ collections:
       - {label: "ID", name: "id", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
-      - {label: "Body", name: "bpdy", widget: "markdown"}
+      - {label: "Body", name: "body", widget: "markdown"}
