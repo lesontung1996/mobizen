@@ -5,7 +5,7 @@ const prices = await Astro.glob('../_posts/prices/*.md');
 ---
 
 <section>
-  {prices.map(item => (
-    <PriceItem data={item} />
+  {prices.map((item, index) => (
+    <PriceItem data={item} index={index} />
   ))}
 </section>
