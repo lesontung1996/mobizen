@@ -1,13 +1,12 @@
 ---
 title: BẢNG GIÁ KÍNH LƯNG IPHONE
-image: /assets/images/kinh-lung-iphone.png
+short: Lưng
+image: /assets/images/kinh-lung.jpg
 id: glass-back
 ---
 
  Sản Phẩm          | Giá   | Bảo Hành   
 -------------------|-------|------------
- iPhone 7          | 250K  | 3-12 Tháng 
- iPhone 7 Plus     | 250K  | 3-12 Tháng 
  iPhone 8          | 300K  | 3-12 Tháng 
  iPhone 8 Plus     | 350K  | 3-12 Tháng 
  iPhone X          | 400K  | 3-12 Tháng 

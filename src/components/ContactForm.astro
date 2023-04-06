@@ -1,36 +1,64 @@
+---
+const devices = [
+  "iPhone 6/6s",
+  "iPhone 6Plus/6s Plus",
+  "iPhone 7",
+  "iPhone 7 Plus",
+  "iPhone 8",
+  "iPhone 8 Plus",
+  "iPhone X",
+  "iPhone Xs",
+  "iPhone Xs Max",
+  "iPhone Xr",
+  "iPhone 11",
+  "iPhone 11 Pro",
+  "iPhone 11 Pro Max",
+  "iPhone 12",
+  "iPhone 12 Pro",
+  "iPhone 12 pro Max",
+]
+
+const services = [
+  "Thay Pin",
+  "Thay Màn Hình",
+  "Thay/Ép Kính",
+  "Thay Camera (Trước/Sau)",
+  "Thay Vỏ",
+]
+---
 <div class="py-10 text-center">
   <h2 class="text-3xl font-bold uppercase text-gradient mb-8">ĐẶT LỊCH NGAY</h2>
-  <form class="max-w-lg mx-auto">
+  <form class="max-w-lg mx-auto" name="contact" method="POST" data-netlify="true">
     <div class="mb-4">
-      <input class="px-3 py-2 block w-full bg-gray-100 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500" type="text" placeholder="Họ và tên">
+      <input class="px-3 py-2 block w-full bg-gray-100 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500" type="text" placeholder="Họ và tên" name="Họ và tên">
     </div>
     <div class="mb-4">
-      <select class="px-3 py-2 block w-full bg-gray-100 border border-gray-300 rounded-md appearance-none focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500">
-        <option value="" selected disabled hidden>Loại máy</option>
-        <option value="Option 1">Option 1</option>
-        <option value="Option 2">Option 2</option>
-        <option value="Option 3">Option 3</option>
+      <select class="px-3 py-2 block w-full bg-gray-100 border border-gray-300 rounded-md appearance-none focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500" name="Thiết bị">
+        <option value="" selected disabled>Loại máy</option>
+        {devices.map(device => (
+          <option value={device}>{device}</option>
+        ))}
       </select>
     </div>
     <div class="mb-4">
-      <select class="px-3 py-2 block w-full bg-gray-100 border border-gray-300 rounded-md appearance-none focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500">
-        <option value="" selected disabled hidden>Dịch vụ</option>
-        <option value="Option 1">Option 1</option>
-        <option value="Option 2">Option 2</option>
-        <option value="Option 3">Option 3</option>
+      <select class="px-3 py-2 block w-full bg-gray-100 border border-gray-300 rounded-md appearance-none focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500" name="Dịch vụ">
+        <option value="" selected disabled>Dịch vụ</option>
+        {services.map(service => (
+          <option value={service}>{service}</option>
+        ))}
       </select>
     </div>
     <div class="mb-4">
-      <input class="px-3 py-2 block w-full bg-gray-100 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500" type="text" placeholder="Số điện thoại">
+      <input class="px-3 py-2 block w-full bg-gray-100 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500" type="text" placeholder="Số điện thoại" name="Số điện thoại">
     </div>
     <div class="mb-4">
-      <input class="px-3 py-2 block w-full bg-gray-100 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500" type="date" placeholder="Ngày hẹn">
+      <input class="px-3 py-2 block w-full bg-gray-100 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500" type="date" placeholder="Ngày hẹn" name="Ngày hẹn">
     </div>
     <div class="mb-4">
-      <textarea class="px-3 py-2 block w-full bg-gray-100 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500" placeholder="Lời nhắn"></textarea>
+      <textarea class="px-3 py-2 block w-full bg-gray-100 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500" placeholder="Lời nhắn" name="Lời nhắn"></textarea>
     </div>
     <div class="flex items-center justify-center">
-      <button class="px-10 py-2 text-xl text-white animation-scale bg-gradient rounded-full hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50" type="button">
+      <button class="px-10 py-2 text-xl text-white animation-scale bg-gradient rounded-full hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50" type="submit">
         Đặt lịch ngay
       </button>
     </div>

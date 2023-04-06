@@ -1,6 +1,7 @@
 ---
 title: BẢNG GIÁ PIN IPHONE
-image: /assets/images/hero-2.png
+short: Pin
+image: /assets/images/pin.jpg
 id: battery
 ---
 
