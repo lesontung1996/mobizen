@@ -1,7 +1,7 @@
 ---
 title: BẢNG GIÁ MẶT KÍNH IPHONE
 short: Ép Kính
-image: /assets/images/camera.jpg
+image: /assets/images/kinh.jpg
 id: glass
 ---
 
