@@ -18,5 +18,6 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "ID", name: "id", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Link trên Header", name: "short", widget: "string"}
+      - {label: "Ảnh", name: "image", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
