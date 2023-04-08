@@ -22,5 +22,5 @@ image: /assets/images/pin.jpg
 | iPhone 12 Pro Max                | 1.200.000đ     | 1.400.000đ         |
 | iPhone 13                        | 1.200.000đ     | Liên hệ            |
 | iPhone 13 Pro                    | 1.300.000đ     | Liên hệ            |
-| iPhone 13 Pro Max                | 1.500.000đ     | 3﻿.000.000đ        |
+| iPhone 13 Pro Max                | 1.500.000đ     | Liên hệ            |
 | (*)Pin Bảo Hành 12 Tháng 1 đổi 1 |                |                    |
