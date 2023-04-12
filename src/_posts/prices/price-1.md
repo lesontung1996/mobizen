@@ -10,7 +10,7 @@ image: /assets/images/pin.jpg
 | iPhone 7 Plus                    | 290.000đ       | 450.000đ           |
 | iPhone 8                         | 250.000đ       | 450.000đ           |
 | iPhone 8 Plus                    | 300.000đ       | 500.000đ           |
-| iPhone X                         | 390.000đ       | 650.000đ           |
+| iPhone X                         | 450.000đ       | 650.000đ           |
 | iPhone XR                        | 550.000đ       | 650.000đ           |
 | iPhone Xs Max                    | 650.000đ       | 750.000đ           |
 | iPhone Xs                        | 550.000đ       | 650.000đ           |
