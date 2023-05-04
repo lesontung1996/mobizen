@@ -17,5 +17,5 @@ image: /assets/images/man-hinh.jpg
 | iPhone 12 Pro     | 2.000.000đ  | 4.800.000đ         |
 | iPhone 12 Pro Max | 3.500.000đ  | 6.500.000đ         |
 | iPhone 13         | Liên hệ     | 4.700.000đ         |
-| iPhone 13 Pro     | Liên hệ     | Liên hệ            |
+| iPhone 13 Pro     | Liên hệ     | 8.800.000đ         |
 | iPhone 13 Pro Max | Liên hệ     | 9.800.000đ         |
